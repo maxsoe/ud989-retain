@@ -55,7 +55,7 @@ $(function(){
             octopus.getNotes().forEach(function(note){
                 htmlStr += '<li class="note">'+
                         '<span class="note-date">' +
-                          note.dateSubmitted +
+                          new Date(note.dateSubmitted).toString() +
                         '</span>' +
                         note.content +
                     '</li>';
