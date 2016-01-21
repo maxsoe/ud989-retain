@@ -36,7 +36,8 @@ $(function(){
         }
     };
 
-
+    // if you go into the console and use localStorage.clear()
+    // it will clear all of the persistent storage
     var view = {
         init: function() {
             this.noteList = $('#notes');
@@ -53,7 +54,9 @@ $(function(){
             var htmlStr = '';
             octopus.getNotes().forEach(function(note){
                 htmlStr += '<li class="note">'+
-                        note.dateSubmitted +
+                        '<span class="note-date">' +
+                          note.dateSubmitted +
+                        '</span>' +
                         note.content +
                     '</li>';
             });
